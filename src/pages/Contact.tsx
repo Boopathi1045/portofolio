@@ -117,19 +117,19 @@ const Contact = () => {
               <div className="bg-card p-6 rounded-2xl shadow-md border border-primary/20">
                 <div className="text-3xl mb-3">📧</div>
                 <h3 className="font-heading text-lg font-semibold mb-1 text-primary">Email</h3>
-                <p className="text-muted-foreground text-sm font-mono">boopathi@example.com</p>
+                <p className="text-muted-foreground text-sm font-mono">rboopathi1045@gmail.com</p>
               </div>
 
               <div className="bg-card p-6 rounded-2xl shadow-md border border-primary/20">
                 <div className="text-3xl mb-3">📱</div>
                 <h3 className="font-heading text-lg font-semibold mb-1 text-primary">Phone</h3>
-                <p className="text-muted-foreground text-sm font-mono">+91 98765 43210</p>
+                <p className="text-muted-foreground text-sm font-mono">+91 9786194165</p>
               </div>
 
               <div className="bg-card p-6 rounded-2xl shadow-md border border-primary/20">
                 <div className="text-3xl mb-3">📍</div>
                 <h3 className="font-heading text-lg font-semibold mb-1 text-primary">Location</h3>
-                <p className="text-muted-foreground text-sm font-mono">Chennai, India</p>
+                <p className="text-muted-foreground text-sm font-mono">Bangalore, India</p>
               </div>
 
               <div className="mt-6">
