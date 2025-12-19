@@ -81,7 +81,7 @@ const Index = () => {
             <img
               src={avatar}
               alt="Boopathi R - AI/ML Engineer"
-              className="w-[400px] md:w-[500px] lg:w-[660px] h-auto animate-scale-in"
+              className="w-[400px] md:w-[500px] lg:w-[650px] h-auto animate-scale-in"
             />
           </div>
         </div>
