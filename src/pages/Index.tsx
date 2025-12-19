@@ -77,11 +77,11 @@ const Index = () => {
           </div>
 
           {/* Right Content - Avatar */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20">
+          <div className="absolute right-0 bottom-0 z-20">
             <img
               src={avatar}
               alt="Boopathi R - AI/ML Engineer"
-              className="w-[400px] md:w-[500px] lg:w-[650px] h-auto animate-scale-in"
+              className="h-[85vh] w-auto object-contain animate-scale-in"
             />
           </div>
         </div>
