@@ -10,13 +10,31 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    const form = e.target as HTMLFormElement;
+    const formDataEncoded = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formDataEncoded,
+      });
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,7 +57,21 @@ const Contact = () => {
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-3 bg-card p-10 rounded-2xl shadow-lg animate-slide-in-left border border-primary/20 cyber-border">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+
+                <p hidden>
+                  <label>
+                    Don’t fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium font-mono text-primary">
                     Your Name
