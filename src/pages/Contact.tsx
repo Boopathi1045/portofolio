@@ -184,8 +184,8 @@ const Contact = () => {
                     className="px-5 py-2.5 bg-secondary text-primary border border-primary/30 rounded-full text-sm font-mono transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:glow-cyan"
                   >
                     Twitter
-                  </a>
-                </div> */}
+                  </a> */}
+                </div>
               </div>
 
               <div className="flex items-center gap-3 mt-8 px-5 py-4 bg-success-bg border border-success/30 rounded-xl">
